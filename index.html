@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的GitHub主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #161b22;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #30363d;
+            background-color: #21262d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .avatar i {
+            font-size: 80px;
+            color: #58a6ff;
+        }
+
+        h1 {
+            color: #f0f6fc;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: #8b949e;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #c9d1d9;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #58a6ff;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #21262d;
+        }
+
+        h2 {
+            color: #f0f6fc;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .skill {
+            background-color: #21262d;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #30363d;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background-color: #161b22;
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid #30363d;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #58a6ff;
+        }
+
+        .project-card h3 {
+            color: #58a6ff;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .project-card p {
+            margin-bottom: 20px;
+            color: #8b949e;
+        }
+
+        .project-links a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-content p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #238636;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2ea043;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <h1>您的姓名</h1>
+                    <p class="tagline">前端开发者 | 开源爱好者 | 技术写作者</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>关于我</h2>
+            <div class="about-content">
+                <p>您好！我是一名充满激情的前端开发者，热爱创建美观、实用的Web应用程序。我有X年的开发经验，擅长HTML、CSS、JavaScript和React等技术。</p>
+                <p>在业余时间，我喜欢参与开源项目、学习新技术和撰写技术博客。我相信持续学习和分享是技术进步的关键。</p>
+                
+                <div class="skills">
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">React</span>
+                    <span class="skill">Git</span>
+                    <span class="skill">响应式设计</span>
+                    <span class="skill">UI/UX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>我的项目</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>项目名称一</h3>
+                    <p>这是一个使用React和Node.js构建的Web应用程序，具有用户认证、数据可视化等功能。</p>
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> 查看代码</a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> 在线演示</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>项目名称二</h3>
+                    <p>一个轻量级的CSS框架，专注于简洁性和自定义性，适合快速原型设计。</p>
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> 查看代码</a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> 在线演示</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>项目名称三</h3>
+                    <p>基于JavaScript的游戏项目，使用Canvas API实现，具有丰富的动画效果和交互体验。</p>
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> 查看代码</a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> 在线演示</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>联系我</h2>
+            <div class="contact-content">
+                <p>如果您对我的工作感兴趣，或者有任何合作机会，请随时与我联系。我很乐意与您交流！</p>
+                <a href="mailto:youremail@example.com" class="btn">发送邮件</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 您的姓名. 保留所有权利.</p>
+            <p>Hosted on GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transition = 'all 0.3s ease';
+                });
+            });
+            
+            // 控制台信息
+            console.log('欢迎查看我的GitHub主页代码！');
+            console.log('您可以根据需要自定义此模板。');
+        });
+    </script>
+</body>
+</html>
